@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 relative overflow-hidden">
+    <section id="pricing" className="py-24 relative overflow-hidden bg-secondary/30 border-y border-white/5">
       {/* Background Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none" />
 
