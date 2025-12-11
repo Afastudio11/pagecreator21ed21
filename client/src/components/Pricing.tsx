@@ -11,7 +11,7 @@ export function Pricing() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="max-w-4xl mx-auto space-y-16">
           
           {/* Header & Benefits Centered */}
           <div className="text-center space-y-8">
@@ -52,7 +52,7 @@ export function Pricing() {
           </div>
 
           {/* Pricing Cards Centered */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
              {/* Early Bird Card */}
              <motion.div
                initial={{ opacity: 0, y: 20 }}
