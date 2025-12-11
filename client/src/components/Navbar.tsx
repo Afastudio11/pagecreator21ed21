@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+import logoImage from "@assets/ASET_LANDING_PAGE_MARKETALKSHOW_1765437111813.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +26,8 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="text-xl font-bold font-heading tracking-tighter">
-          <span className="text-gradient">F&B STRATEGY</span>
+        <div>
+          <img src={logoImage} alt="Documenta Fine Creative RKP" className="h-8" />
         </div>
 
         {/* Desktop Nav */}

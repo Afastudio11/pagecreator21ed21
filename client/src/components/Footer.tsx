@@ -1,5 +1,6 @@
 import { EVENT_DETAILS } from "@/lib/constants";
 import { MapPin, Phone, Instagram, Facebook, Globe } from "lucide-react";
+import logoImage from "@assets/ASET_LANDING_PAGE_MARKETALKSHOW_1765437111813.png";
 
 export function Footer() {
   return (
@@ -8,9 +9,9 @@ export function Footer() {
         <div className="flex flex-col items-center text-center gap-12 mb-12">
           
           <div className="max-w-2xl mx-auto">
-             <h3 className="text-2xl font-bold font-heading mb-6">
-               <span className="text-gradient">F&B STRATEGY</span>
-             </h3>
+             <div className="mb-6">
+               <img src={logoImage} alt="Documenta Fine Creative RKP" className="h-10 mx-auto" />
+             </div>
              <p className="text-muted-foreground mb-6">
                Bergabunglah dengan ratusan pebisnis F&B lainnya dan mulailah transformasi digital bisnis Anda hari ini.
              </p>
