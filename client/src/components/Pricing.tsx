@@ -65,7 +65,7 @@ export function Pricing() {
                 </button>
               </div>
 
-              <div className="bg-brand-gray rounded-xl p-6 border border-white/10 hover:border-white/30 transition-colors group">
+              <div className="bg-brand-gray rounded-xl p-6 border border-white/10 hover:border-white/30 transition-colors group relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-brand-pink text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                   GROUP
                 </div>
