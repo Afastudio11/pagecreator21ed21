@@ -18,9 +18,6 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-brand-cyan text-sm font-medium mb-6">
-              Workshop Exclusive F&B Business
-            </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
               Ingin Jualan F&B Tembus <span className="text-gradient">Jutaan</span> Lewat Konten TikTok & Affiliate?
             </h1>
