@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Sparkles } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 
@@ -25,8 +25,7 @@ export function Navbar() {
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       <nav className="bg-brand-dark/90 backdrop-blur-md border border-white/10 rounded-full py-3 px-6 flex items-center justify-between w-full max-w-4xl shadow-2xl">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-6 h-6 text-brand-purple fill-brand-purple" />
-          <span className="text-xl font-bold tracking-tight text-white">Market Talkshow</span>
+          <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-8 w-auto" />
         </div>
 
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
@@ -47,7 +46,7 @@ export function Navbar() {
         </ul>
 
         <Button 
-          className="hidden md:flex bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-brand-purple hover:text-white transition-all duration-300"
+          className="hidden md:flex bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-yellow-500 transition-all duration-300"
           onClick={() => handleScroll('#pricing')}
         >
           Daftar Sekarang
@@ -69,13 +68,13 @@ export function Navbar() {
                     e.preventDefault();
                     handleScroll(link.href);
                   }}
-                  className="text-lg font-medium text-white hover:text-brand-purple transition-colors"
+                  className="text-lg font-medium text-white hover:text-yellow-400 transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
               <Button 
-                className="w-full bg-brand-purple text-white hover:bg-brand-purple/90 rounded-full"
+                className="w-full bg-yellow-400 text-black hover:bg-yellow-500 rounded-full"
                 onClick={() => handleScroll('#pricing')}
               >
                 Daftar Sekarang
