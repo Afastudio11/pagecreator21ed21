@@ -1,87 +1,88 @@
-import { ArrowRight, Play, Calendar, Clock, MapPin } from "lucide-react";
-import { EVENT_DETAILS } from "@/lib/constants";
+import { ArrowRight, Star } from "lucide-react";
 
 export function Hero() {
   return (
-    <div className="relative bg-white text-black pt-32 pb-24 md:pt-40 md:pb-32 rounded-b-[3rem] md:rounded-b-[5rem] overflow-hidden z-10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
-        
-        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-purple/20 blur-[100px] rounded-full pointer-events-none" />
-        <div className="absolute top-20 left-10 text-brand-purple">
-          <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" /></svg>
-        </div>
+    <div className="relative bg-white text-black pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-20 left-10 text-green-500 animate-spin-slow">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" />
+        </svg>
+      </div>
+      <div className="absolute bottom-32 left-1/4 text-green-500 opacity-50">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" />
+        </svg>
+      </div>
+      
+      {/* Curved decorative lines */}
+      <svg className="absolute bottom-0 right-0 w-64 h-64 text-gray-200 opacity-50" viewBox="0 0 100 100" fill="none">
+        <path d="M100 0 Q60 50 100 100" stroke="currentColor" strokeWidth="0.5" />
+        <path d="M90 0 Q50 50 90 100" stroke="currentColor" strokeWidth="0.5" />
+      </svg>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-semibold">
-              <span className="w-2 h-2 rounded-full bg-brand-purple animate-pulse"></span>
-              {EVENT_DETAILS.date}
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
-              Ingin Jualan F&B Tembus <span className="relative inline-block">
-                Jutaan
-                <svg className="absolute w-full h-3 -bottom-1 left-0 text-brand-purple" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left content */}
+          <div className="space-y-6 relative z-10">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
+              Empowering Brands Through Creative Solutions
+              <span className="inline-block ml-2 text-green-500 align-middle">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" />
                 </svg>
-              </span> Lewat TikTok?
+              </span>
             </h1>
             
-            <p className="text-lg text-gray-600 max-w-md leading-relaxed">
-              Pelajari strategi growth dari awareness ke omzet langsung dari 3 expert industri. Jangan sampai ketinggalan momentum digital 2025!
+            <p className="text-base text-gray-600 max-w-sm leading-relaxed">
+              From web development to branding, we deliver innovative strategies that elevate your brand and drive growth. Let's create something exceptional together.
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500">
-              <div className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-lg">
-                <Clock className="w-4 h-4 text-brand-purple" />
-                {EVENT_DETAILS.time}
-              </div>
-              <div className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-lg">
-                <MapPin className="w-4 h-4 text-brand-purple" />
-                {EVENT_DETAILS.location}
-              </div>
-            </div>
+            <button className="px-6 py-3 rounded-full font-semibold border-2 border-black hover:bg-black hover:text-white transition-all duration-300">
+              Innovate Your Brand
+            </button>
             
-            <div className="flex flex-wrap items-center gap-4">
-              <button 
-                className="bg-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-brand-purple hover:text-white transition-all duration-300 shadow-lg group"
-                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Amankan Kursi Anda
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-wrap items-center gap-4 pt-4">
+              <button className="bg-green-500 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-green-600 transition-all duration-300 shadow-lg">
+                Start Your Project
+                <ArrowRight className="w-4 h-4" />
               </button>
               
-              <button className="px-8 py-4 rounded-full font-bold border border-gray-300 hover:border-black transition-all flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center">
-                  <Play className="w-3 h-3 fill-black ml-0.5" />
-                </div>
-                Info Lengkap
+              <button className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300">
+                Let's Collaborate
               </button>
             </div>
-
-            <p className="text-sm text-red-500 font-semibold animate-pulse">
-              Limited Seat Available!
-            </p>
           </div>
 
+          {/* Right content - Image and stats */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-[4/5] md:aspect-square">
-              <div className="absolute inset-0 bg-gray-100 rounded-full rotate-6 scale-95 transform origin-bottom-right"></div>
-              <div className="absolute inset-0 bg-brand-purple rounded-full -rotate-3 scale-[0.98] opacity-80"></div>
+            <div className="relative">
+              {/* Green blob background */}
+              <div className="absolute -bottom-8 -left-8 w-72 h-72 bg-green-500 rounded-full opacity-90 z-0"></div>
               
+              {/* Main image */}
               <img 
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=800&fit=crop"
-                alt="Workshop Creative"
-                className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10 hover:scale-[1.02] transition-transform duration-500"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop&crop=top"
+                alt="Creative Professional"
+                className="relative w-80 h-96 object-cover object-top rounded-b-full z-10"
               />
 
-              <div className="absolute top-10 -right-4 md:-right-10 bg-white p-4 rounded-2xl shadow-xl z-20 flex flex-col items-center">
-                <div className="flex gap-1 mb-1">
-                  {[1,2,3,4,5].map(i => <div key={i} className="w-4 h-4 text-brand-purple">★</div>)}
+              {/* Stats card */}
+              <div className="absolute top-8 -right-4 md:right-0 bg-white p-4 rounded-2xl shadow-xl z-20">
+                <div className="flex gap-0.5 mb-1">
+                  {[1,2,3,4,5].map(i => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                  ))}
                 </div>
-                <span className="font-bold text-2xl">3 Expert</span>
-                <span className="text-xs text-gray-500 uppercase tracking-wide">Industry Leaders</span>
+                <span className="font-bold text-2xl block">10 Years</span>
+                <span className="text-xs text-gray-500">Experience</span>
               </div>
+
+              {/* Decorative curved arrow */}
+              <svg className="absolute -left-16 top-1/2 w-16 h-24 text-black" viewBox="0 0 50 80" fill="none">
+                <path d="M40 0 Q10 40 40 80" stroke="currentColor" strokeWidth="2" fill="none" />
+                <path d="M35 70 L40 80 L30 75" stroke="currentColor" strokeWidth="2" fill="none" />
+              </svg>
             </div>
           </div>
         </div>
