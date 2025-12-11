@@ -38,7 +38,7 @@ export function Speakers() {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                <div className="absolute inset-0 flex flex-col justify-end p-6 text-center">
                   <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-2xl font-bold font-heading mb-1">{speaker.name}</h3>
                     <p className={`text-sm font-medium bg-gradient-to-r ${speaker.color} bg-clip-text text-transparent mb-3`}>
