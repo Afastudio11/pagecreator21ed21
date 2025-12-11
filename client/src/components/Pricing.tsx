@@ -33,38 +33,50 @@ export function Pricing() {
               ))}
             </div>
 
-            <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm max-w-xl mx-auto">
-              <h4 className="font-bold text-lg mb-2 flex items-center justify-center gap-2">
-                <QrCode className="w-5 h-5 text-brand-pink" />
-                Cara Mendaftar
-              </h4>
-              <p className="text-sm text-muted-foreground mb-4">
-                Scan QR Code pada flyer atau hubungi contact person kami untuk mengamankan slot Anda.
-              </p>
-              <Button 
-                variant="outline" 
-                className="w-full h-12 rounded-lg border-brand-purple/50 text-brand-purple hover:bg-brand-purple hover:text-white transition-all"
-                onClick={() => window.open(`https://wa.me/${EVENT_DETAILS.contact.replace(/[^0-9]/g, '')}`, '_blank')}
-              >
-                Chat WhatsApp Admin
-              </Button>
-            </div>
           </div>
 
-          {/* Pricing Cards Centered */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-             {/* Early Bird Card */}
-             <motion.div
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.5 }}
-               viewport={{ once: true }}
-             >
-                <Card className="relative overflow-hidden border-2 border-brand-yellow bg-background/50 backdrop-blur-xl h-full">
+          {/* Cards Layout: Cara Mendaftar (left) + Pricing Cards (right stacked) */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Left: Cara Mendaftar */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="h-full"
+            >
+              <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm h-full flex flex-col justify-center">
+                <h4 className="font-bold text-lg mb-2 flex items-center justify-center gap-2">
+                  <QrCode className="w-5 h-5 text-brand-pink" />
+                  Cara Mendaftar
+                </h4>
+                <p className="text-sm text-muted-foreground mb-4 text-center">
+                  Scan QR Code pada flyer atau hubungi contact person kami untuk mengamankan slot Anda.
+                </p>
+                <Button 
+                  variant="outline" 
+                  className="w-full h-12 rounded-lg border-brand-purple/50 text-brand-purple hover:bg-brand-purple hover:text-white transition-all"
+                  onClick={() => window.open(`https://wa.me/${EVENT_DETAILS.contact.replace(/[^0-9]/g, '')}`, '_blank')}
+                >
+                  Chat WhatsApp Admin
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right: Pricing Cards Stacked */}
+            <div className="flex flex-col gap-6">
+              {/* Early Bird Card */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="relative overflow-hidden border-2 border-brand-yellow bg-background/50 backdrop-blur-xl">
                   <div className="absolute top-0 right-0 bg-brand-yellow text-black text-xs font-bold px-3 py-1 rounded-bl-lg">
                     BEST VALUE
                   </div>
-                  <div className="p-6 md:p-8 flex flex-col items-center text-center justify-between h-full gap-6">
+                  <div className="p-6 flex flex-col items-center text-center gap-4">
                     <div>
                       <h3 className="text-xl font-bold mb-1">Early Bird Ticket</h3>
                       <p className="text-sm text-muted-foreground mb-2">Harga spesial untuk pendaftar awal</p>
@@ -81,20 +93,20 @@ export function Pricing() {
                     </Button>
                   </div>
                 </Card>
-             </motion.div>
+              </motion.div>
 
-             {/* Group Offer Card */}
-             <motion.div
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.5, delay: 0.1 }}
-               viewport={{ once: true }}
-             >
-                <Card className="relative overflow-hidden border border-brand-pink/50 bg-background/50 backdrop-blur-xl h-full">
+              {/* Group Offer Card */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="relative overflow-hidden border border-brand-pink/50 bg-background/50 backdrop-blur-xl">
                   <div className="absolute top-0 right-0 bg-brand-pink text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                     SPECIAL OFFER
                   </div>
-                  <div className="p-6 md:p-8 flex flex-col items-center text-center justify-between h-full gap-6">
+                  <div className="p-6 flex flex-col items-center text-center gap-4">
                     <div>
                       <h3 className="text-xl font-bold mb-1">Group Package</h3>
                       <p className="text-sm text-muted-foreground mb-2">Daftar bareng 5 orang</p>
@@ -111,7 +123,8 @@ export function Pricing() {
                     </Button>
                   </div>
                 </Card>
-             </motion.div>
+              </motion.div>
+            </div>
           </div>
 
         </div>
