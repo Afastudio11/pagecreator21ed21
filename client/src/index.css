@@ -42,7 +42,9 @@
   --color-brand-purple: hsl(265 89% 66%);
   --color-brand-pink: hsl(319 90% 64%);
   --color-brand-cyan: hsl(190 90% 50%);
-  --color-brand-yellow: hsl(50 90% 57%); /* #f2cc30 */
+  --color-brand-yellow: hsl(50 90% 57%);
+  --color-brand-dark: hsl(240 10% 8%);
+  --color-brand-gray: hsl(240 6% 12%);
 
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
@@ -50,17 +52,16 @@
 }
 
 :root {
-  /* Dark Theme by Default for this design */
-  --background: 240 10% 3.9%;
+  --background: 0 0% 0%;
   --foreground: 0 0% 98%;
 
-  --card: 240 10% 5%; /* Slightly lighter than bg */
+  --card: 240 10% 5%;
   --card-foreground: 0 0% 98%;
 
   --popover: 240 10% 3.9%;
   --popover-foreground: 0 0% 98%;
 
-  --primary: 265 89% 66%; /* Purple from flyer */
+  --primary: 265 89% 66%;
   --primary-foreground: 210 40% 98%;
 
   --secondary: 240 4% 16%;
@@ -69,7 +70,7 @@
   --muted: 240 4% 16%;
   --muted-foreground: 240 5% 64.9%;
 
-  --accent: 319 90% 64%; /* Pink/Magenta */
+  --accent: 319 90% 64%;
   --accent-foreground: 210 40% 98%;
 
   --destructive: 0 62.8% 30.6%;
@@ -91,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-brand-yellow via-brand-pink to-brand-purple;
+  @apply bg-clip-text text-transparent bg-linear-to-r from-brand-purple via-brand-pink to-brand-cyan;
 }
 
 .glass-card {
@@ -100,4 +101,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-glow {
   background: radial-gradient(circle at center, hsla(265, 89%, 66%, 0.15) 0%, transparent 70%);
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
 }

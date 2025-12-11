@@ -1,0 +1,79 @@
+import React from 'react';
+import { ArrowRight, Play } from 'lucide-react';
+
+const Hero: React.FC = () => {
+  return (
+    <div className="relative bg-white text-black pt-32 pb-24 md:pt-40 md:pb-32 rounded-b-[3rem] md:rounded-b-[5rem] overflow-hidden z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
+        
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-green/20 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-20 left-10 text-brand-green">
+           <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" /></svg>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8 relative z-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-semibold">
+              <span className="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+              Accepting New Projects
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
+              Empowering Brands Through <span className="relative inline-block">
+                Creative
+                <svg className="absolute w-full h-3 -bottom-1 left-0 text-brand-green" viewBox="0 0 100 10" preserveAspectRatio="none">
+                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+                </svg>
+              </span> Solutions
+            </h1>
+            
+            <p className="text-lg text-gray-600 max-w-md leading-relaxed">
+              From web development to branding, we deliver innovative strategies that elevate your brand and drive growth. Let's create something exceptional together.
+            </p>
+            
+            <div className="flex flex-wrap items-center gap-4">
+              <button className="bg-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-brand-green hover:text-black transition-all duration-300 shadow-lg group">
+                Start Your Project
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+              
+              <button className="px-8 py-4 rounded-full font-bold border border-gray-300 hover:border-black transition-all flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center">
+                   <Play className="w-3 h-3 fill-black ml-0.5" />
+                </div>
+                Showreel
+              </button>
+            </div>
+          </div>
+
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md aspect-[4/5] md:aspect-square">
+               {/* Abstract shapes behind image */}
+               <div className="absolute inset-0 bg-gray-100 rounded-full rotate-6 scale-95 transform origin-bottom-right"></div>
+               <div className="absolute inset-0 bg-brand-green rounded-full -rotate-3 scale-[0.98] opacity-80"></div>
+               
+               {/* Main Image */}
+               <img 
+                 src="https://picsum.photos/id/64/800/800" 
+                 alt="Creative Professional" 
+                 className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10 hover:scale-[1.02] transition-transform duration-500"
+               />
+
+               {/* Floating Badge */}
+               <div className="absolute top-10 -right-4 md:-right-10 bg-white p-4 rounded-2xl shadow-xl z-20 flex flex-col items-center animate-bounce duration-[3000ms]">
+                 <div className="flex gap-1 mb-1">
+                   {[1,2,3,4,5].map(i => <div key={i} className="w-4 h-4 text-brand-green fill-brand-green">★</div>)}
+                 </div>
+                 <span className="font-bold text-2xl">10 Years</span>
+                 <span className="text-xs text-gray-500 uppercase tracking-wide">Experience</span>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;

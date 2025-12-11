@@ -1,77 +1,91 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
+import { ArrowRight, Play, Calendar, Clock, MapPin } from "lucide-react";
 import { EVENT_DETAILS } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 hero-glow opacity-50 pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-purple/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-pink/20 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
+    <div className="relative bg-white text-black pt-32 pb-24 md:pt-40 md:pb-32 rounded-b-[3rem] md:rounded-b-[5rem] overflow-hidden z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
+        
+        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-purple/20 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-20 left-10 text-brand-purple">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" /></svg>
+        </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
-              Ingin Jualan F&B Tembus <span className="text-gradient">Jutaan</span> Lewat Konten TikTok & Affiliate?
-            </h1>
-          </motion.div>
-
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
-          >
-            Pelajari strategi growth dari awareness ke omzet langsung dari 3 expert industri.
-            Jangan sampai ketinggalan momentum digital 2025!
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4 text-sm md:text-base text-muted-foreground"
-          >
-            <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/5">
-              <Calendar className="w-5 h-5 text-brand-purple" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8 relative z-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-sm font-semibold">
+              <span className="w-2 h-2 rounded-full bg-brand-purple animate-pulse"></span>
               {EVENT_DETAILS.date}
             </div>
-            <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/5">
-              <Clock className="w-5 h-5 text-brand-pink" />
-              {EVENT_DETAILS.time}
-            </div>
-            <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/5">
-              <MapPin className="w-5 h-5 text-brand-cyan" />
-              {EVENT_DETAILS.location}
-            </div>
-          </motion.div>
+            
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
+              Ingin Jualan F&B Tembus <span className="relative inline-block">
+                Jutaan
+                <svg className="absolute w-full h-3 -bottom-1 left-0 text-brand-purple" viewBox="0 0 100 10" preserveAspectRatio="none">
+                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+                </svg>
+              </span> Lewat TikTok?
+            </h1>
+            
+            <p className="text-lg text-gray-600 max-w-md leading-relaxed">
+              Pelajari strategi growth dari awareness ke omzet langsung dari 3 expert industri. Jangan sampai ketinggalan momentum digital 2025!
+            </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="pt-4"
-          >
-            <Button 
-              size="lg" 
-              className="bg-brand-purple hover:bg-brand-purple/90 text-white rounded-full px-8 h-14 text-lg shadow-lg shadow-brand-purple/25 hover:scale-105 transition-transform"
-              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Amankan Kursi Anda <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <p className="mt-4 text-sm text-red-400 font-semibold animate-pulse">
+            <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+              <div className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-lg">
+                <Clock className="w-4 h-4 text-brand-purple" />
+                {EVENT_DETAILS.time}
+              </div>
+              <div className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-lg">
+                <MapPin className="w-4 h-4 text-brand-purple" />
+                {EVENT_DETAILS.location}
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap items-center gap-4">
+              <button 
+                className="bg-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-brand-purple hover:text-white transition-all duration-300 shadow-lg group"
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Amankan Kursi Anda
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+              
+              <button className="px-8 py-4 rounded-full font-bold border border-gray-300 hover:border-black transition-all flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center">
+                  <Play className="w-3 h-3 fill-black ml-0.5" />
+                </div>
+                Info Lengkap
+              </button>
+            </div>
+
+            <p className="text-sm text-red-500 font-semibold animate-pulse">
               Limited Seat Available!
             </p>
-          </motion.div>
+          </div>
+
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md aspect-[4/5] md:aspect-square">
+              <div className="absolute inset-0 bg-gray-100 rounded-full rotate-6 scale-95 transform origin-bottom-right"></div>
+              <div className="absolute inset-0 bg-brand-purple rounded-full -rotate-3 scale-[0.98] opacity-80"></div>
+              
+              <img 
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=800&fit=crop"
+                alt="Workshop Creative"
+                className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10 hover:scale-[1.02] transition-transform duration-500"
+              />
+
+              <div className="absolute top-10 -right-4 md:-right-10 bg-white p-4 rounded-2xl shadow-xl z-20 flex flex-col items-center">
+                <div className="flex gap-1 mb-1">
+                  {[1,2,3,4,5].map(i => <div key={i} className="w-4 h-4 text-brand-purple">★</div>)}
+                </div>
+                <span className="font-bold text-2xl">3 Expert</span>
+                <span className="text-xs text-gray-500 uppercase tracking-wide">Industry Leaders</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
