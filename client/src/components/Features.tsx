@@ -51,7 +51,7 @@ export function Features() {
           </div>
         </div>
 
-        <div className="relative h-full min-h-[500px] bg-black rounded-3xl overflow-hidden p-8 flex flex-col justify-between group">
+        <div className="hidden lg:flex relative h-full min-h-[500px] bg-black rounded-3xl overflow-hidden p-8 flex-col justify-between group">
           <img 
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=800&fit=crop"
             alt="Expert at work" 

@@ -47,7 +47,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <button 
-            className="hidden md:flex btn-fancy"
+            className="btn-fancy text-xs md:text-sm py-2 px-4 md:py-3 md:px-6"
             onClick={() => handleScroll('#pricing')}
           >
             <span>Daftar Sekarang</span>
