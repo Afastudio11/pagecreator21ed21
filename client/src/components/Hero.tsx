@@ -57,23 +57,12 @@ export function Hero() {
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-[4/5] md:aspect-square">
-              <div className="absolute inset-0 bg-yellow-100 rounded-full rotate-6 scale-95 transform origin-bottom-right"></div>
-              <div className="absolute inset-0 bg-yellow-400 rounded-full -rotate-3 scale-[0.98] opacity-80"></div>
-              
+            <div className="relative w-full max-w-md">
               <img 
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=800&fit=crop"
-                alt="Workshop Creative"
-                className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10 hover:scale-[1.02] transition-transform duration-500"
+                src="/hero-phone.png"
+                alt="Digital Marketing"
+                className="relative w-full h-auto object-contain z-10 hover:scale-[1.02] transition-transform duration-500"
               />
-
-              <div className="absolute top-10 -right-4 md:-right-10 bg-white p-4 rounded-2xl shadow-xl z-20 flex flex-col items-center">
-                <div className="flex gap-1 mb-1">
-                  {[1,2,3,4,5].map(i => <div key={i} className="w-4 h-4 text-yellow-400">★</div>)}
-                </div>
-                <span className="font-bold text-2xl">3 Expert</span>
-                <span className="text-xs text-gray-500 uppercase tracking-wide">Industry Leaders</span>
-              </div>
             </div>
           </div>
         </div>
