@@ -22,10 +22,10 @@ export function Navbar() {
   };
 
   return (
-    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-      <nav className="bg-brand-dark/90 backdrop-blur-md border border-white/10 rounded-full py-3 px-6 flex items-center justify-between w-full max-w-4xl shadow-2xl">
+    <div className="fixed top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-3 md:px-4">
+      <nav className="bg-brand-dark/90 backdrop-blur-md border border-white/10 rounded-full py-2 md:py-3 px-4 md:px-6 flex items-center justify-between w-full max-w-4xl shadow-2xl">
         <div className="flex items-center gap-2">
-          <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-12 w-auto" />
+          <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-8 md:h-12 w-auto" />
         </div>
 
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
@@ -45,43 +45,45 @@ export function Navbar() {
           ))}
         </ul>
 
-        <button 
-          className="hidden md:flex btn-fancy"
-          onClick={() => handleScroll('#pricing')}
-        >
-          <span>Daftar Sekarang</span>
-        </button>
+        <div className="flex items-center gap-2">
+          <button 
+            className="hidden md:flex btn-fancy"
+            onClick={() => handleScroll('#pricing')}
+          >
+            <span>Daftar Sekarang</span>
+          </button>
 
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className="text-white">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="bg-brand-dark border-l border-white/10">
-            <div className="flex flex-col gap-6 mt-10">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleScroll(link.href);
-                  }}
-                  className="text-lg font-medium text-white hover:text-yellow-400 transition-colors"
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon" className="text-white">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-brand-dark border-l border-white/10">
+              <div className="flex flex-col gap-6 mt-10">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleScroll(link.href);
+                    }}
+                    className="text-lg font-medium text-white hover:text-yellow-400 transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+                <button 
+                  className="w-full btn-fancy"
+                  onClick={() => handleScroll('#pricing')}
                 >
-                  {link.name}
-                </a>
-              ))}
-              <button 
-                className="w-full btn-fancy"
-                onClick={() => handleScroll('#pricing')}
-              >
-                <span>Daftar Sekarang</span>
-              </button>
-            </div>
-          </SheetContent>
-        </Sheet>
+                  <span>Daftar Sekarang</span>
+                </button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </nav>
     </div>
   );
