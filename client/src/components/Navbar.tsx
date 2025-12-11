@@ -25,7 +25,7 @@ export function Navbar() {
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       <nav className="bg-brand-dark/90 backdrop-blur-md border border-white/10 rounded-full py-3 px-6 flex items-center justify-between w-full max-w-4xl shadow-2xl">
         <div className="flex items-center gap-2">
-          <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-8 w-auto" />
+          <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-12 w-auto" />
         </div>
 
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">

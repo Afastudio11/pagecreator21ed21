@@ -1,4 +1,4 @@
-import { ArrowRight, Play, Clock, MapPin } from "lucide-react";
+import { ArrowRight, Clock, MapPin, Calendar } from "lucide-react";
 import { EVENT_DETAILS } from "@/lib/constants";
 
 export function Hero() {
@@ -7,17 +7,9 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
         
         <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400/20 blur-[100px] rounded-full pointer-events-none" />
-        <div className="absolute top-20 left-10 text-yellow-400">
-          <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" /></svg>
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-50 border border-yellow-200 text-sm font-semibold">
-              <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-              {EVENT_DETAILS.date}
-            </div>
-            
             <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
               Ingin Jualan F&B Tembus <span className="relative inline-block">
                 Jutaan
@@ -31,37 +23,34 @@ export function Hero() {
               Pelajari strategi growth dari awareness ke omzet langsung dari 3 expert industri. Jangan sampai ketinggalan momentum digital 2025!
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500">
-              <div className="flex items-center gap-2 bg-yellow-50 px-3 py-2 rounded-lg border border-yellow-100">
-                <Clock className="w-4 h-4 text-yellow-500" />
+            <div className="flex flex-wrap items-center gap-3 text-sm">
+              <div className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
+                <Calendar className="w-4 h-4" />
+                {EVENT_DETAILS.date}
+              </div>
+              <div className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
+                <Clock className="w-4 h-4" />
                 {EVENT_DETAILS.time}
               </div>
-              <div className="flex items-center gap-2 bg-yellow-50 px-3 py-2 rounded-lg border border-yellow-100">
-                <MapPin className="w-4 h-4 text-yellow-500" />
+              <div className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
+                <MapPin className="w-4 h-4" />
                 {EVENT_DETAILS.location}
               </div>
             </div>
             
             <div className="flex flex-wrap items-center gap-4">
               <button 
-                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-yellow-500 transition-all duration-300 shadow-lg group"
+                className="bg-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-800 transition-all duration-300 shadow-lg group"
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Amankan Kursi Anda
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               
-              <button className="px-8 py-4 rounded-full font-bold border border-gray-300 hover:border-yellow-400 transition-all flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center">
-                  <Play className="w-3 h-3 fill-black ml-0.5" />
-                </div>
-                Info Lengkap
-              </button>
+              <p className="text-sm text-red-500 font-semibold animate-pulse">
+                Limited Seat Available!
+              </p>
             </div>
-
-            <p className="text-sm text-red-500 font-semibold animate-pulse">
-              Limited Seat Available!
-            </p>
           </div>
 
           <div className="relative flex justify-center lg:justify-end">

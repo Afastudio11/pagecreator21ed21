@@ -28,7 +28,7 @@ export function Footer() {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 text-sm">
           <div className="col-span-2">
             <div className="mb-4">
-              <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-10 w-auto" />
+              <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-14 w-auto" />
             </div>
             <p className="text-gray-500 mb-6">Empowering F&B brands through digital marketing strategies.</p>
             <div className="flex gap-4">
