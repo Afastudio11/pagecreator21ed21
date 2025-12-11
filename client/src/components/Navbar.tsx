@@ -22,10 +22,10 @@ export function Navbar() {
   };
 
   return (
-    <div className="fixed top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-3 md:px-4">
-      <nav className="bg-brand-dark/90 backdrop-blur-md border border-white/10 rounded-full py-2 md:py-3 px-4 md:px-6 flex items-center justify-between w-full max-w-4xl shadow-2xl">
-        <div className="flex items-center gap-2">
-          <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-8 md:h-12 w-auto" />
+    <div className="fixed top-3 md:top-6 left-0 right-0 z-50 flex justify-center px-2 md:px-4">
+      <nav className="bg-brand-dark/90 backdrop-blur-md border border-white/10 rounded-full py-1.5 md:py-3 px-3 md:px-6 flex items-center justify-between w-full max-w-4xl shadow-2xl">
+        <div className="flex items-center gap-1">
+          <img src="/logo-market-talkshow.png" alt="Market Talkshow" className="h-6 md:h-12 w-auto" />
         </div>
 
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
@@ -45,9 +45,9 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 md:gap-2">
           <button 
-            className="btn-fancy text-xs md:text-sm py-2 px-4 md:py-3 md:px-6"
+            className="btn-fancy text-[10px] md:text-sm py-1.5 px-3 md:py-3 md:px-6"
             onClick={() => handleScroll('#pricing')}
           >
             <span>Daftar Sekarang</span>
@@ -55,8 +55,8 @@ export function Navbar() {
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-white">
-                <Menu className="h-5 w-5" />
+              <Button variant="ghost" size="sm" className="text-white p-1">
+                <Menu className="h-4 w-4" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-brand-dark border-l border-white/10">
