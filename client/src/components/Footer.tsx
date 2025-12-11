@@ -16,10 +16,10 @@ export function Footer() {
 
           <div className="z-10">
             <button 
-              className="bg-yellow-400 text-black px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 hover:bg-yellow-500 transition-all shadow-lg"
+              className="btn-fancy px-8 py-4 text-lg"
               onClick={() => window.open(`https://wa.me/${EVENT_DETAILS.contact.replace(/[^0-9]/g, '')}`, '_blank')}
             >
-              Daftar Sekarang
+              <span>Daftar Sekarang</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>

@@ -40,18 +40,18 @@ export function Hero() {
             
             <div className="flex flex-wrap items-center gap-4">
               <button 
-                className="bg-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-800 transition-all duration-300 shadow-lg group"
+                className="btn-fancy px-8 py-4"
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Amankan Kursi Anda
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <span>Amankan Kursi Anda</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
               
               <button 
-                className="bg-purple-500 text-white px-6 py-4 rounded-full font-bold hover:bg-purple-600 transition-all duration-300 shadow-lg"
+                className="btn-fancy px-6 py-4"
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Limited Seat Available!
+                <span>Limited Seat Available!</span>
               </button>
             </div>
           </div>

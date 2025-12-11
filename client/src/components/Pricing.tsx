@@ -58,10 +58,10 @@ export function Pricing() {
                   <span className="text-2xl font-bold text-yellow-400">IDR {EVENT_DETAILS.price.promo}</span>
                 </div>
                 <button 
-                  className="w-full bg-yellow-400 text-black py-3 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-yellow-500 transition-all"
+                  className="w-full btn-fancy py-3"
                   onClick={() => window.open(`https://wa.me/${EVENT_DETAILS.contact.replace(/[^0-9]/g, '')}?text=Halo%20Admin,%20saya%20mau%20daftar%20Early%20Bird%20Workshop`, '_blank')}
                 >
-                  Daftar Sekarang <ArrowUpRight className="w-4 h-4" />
+                  <span>Daftar Sekarang</span> <ArrowUpRight className="w-4 h-4" />
                 </button>
               </div>
 
