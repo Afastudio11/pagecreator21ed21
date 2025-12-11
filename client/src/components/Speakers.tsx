@@ -12,18 +12,19 @@ export function Speakers() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {SPEAKERS.map((member) => (
             <div key={member.id} className="bg-brand-gray p-6 rounded-2xl group hover:bg-white/10 transition-colors border border-transparent hover:border-white/10">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="aspect-[3/4] overflow-hidden rounded-xl mb-4 relative">
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-20 h-20 rounded-full object-cover object-top grayscale group-hover:grayscale-0 transition-all border-2 border-brand-purple/30" 
+                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105" 
                 />
-                <div>
-                  <h3 className="font-bold text-lg leading-tight">{member.name}</h3>
-                  <p className="text-xs text-brand-purple uppercase tracking-wide">{member.role}</p>
-                </div>
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-gray to-transparent" />
               </div>
-              <p className="text-gray-400 text-sm">{member.bio}</p>
+              <div className="text-center">
+                <h3 className="font-bold text-xl leading-tight">{member.name}</h3>
+                <p className="text-sm text-brand-purple uppercase tracking-wide mb-2">{member.role}</p>
+              </div>
+              <p className="text-gray-400 text-sm text-center">{member.bio}</p>
             </div>
           ))}
         </div>
