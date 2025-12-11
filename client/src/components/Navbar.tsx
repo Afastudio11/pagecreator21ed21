@@ -45,12 +45,12 @@ export function Navbar() {
           ))}
         </ul>
 
-        <Button 
-          className="hidden md:flex bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-yellow-500 transition-all duration-300"
+        <button 
+          className="hidden md:flex btn-fancy"
           onClick={() => handleScroll('#pricing')}
         >
-          Daftar Sekarang
-        </Button>
+          <span>Daftar Sekarang</span>
+        </button>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
@@ -73,12 +73,12 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <Button 
-                className="w-full bg-yellow-400 text-black hover:bg-yellow-500 rounded-full"
+              <button 
+                className="w-full btn-fancy"
                 onClick={() => handleScroll('#pricing')}
               >
-                Daftar Sekarang
-              </Button>
+                <span>Daftar Sekarang</span>
+              </button>
             </div>
           </SheetContent>
         </Sheet>
