@@ -34,7 +34,7 @@ export function Pricing() {
           </div>
 
           {/* Cards Layout: Cara Mendaftar (left) + Pricing Cards (right stacked) */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Left: Cara Mendaftar */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
