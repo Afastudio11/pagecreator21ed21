@@ -15,12 +15,10 @@ export function Pricing() {
           
           {/* Header & Benefits Centered */}
           <div className="text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold">
-              Investasi Terbaik untuk <br />
-              <span className="text-gradient">Bisnis Anda</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Investasi Terbaik untuk <span className="text-gradient">Bisnis Anda</span>
             </h2>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Dapatkan akses penuh ke workshop, materi eksklusif, dan kesempatan networking dengan para expert.
             </p>
               
