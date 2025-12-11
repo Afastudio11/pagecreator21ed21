@@ -48,7 +48,7 @@ export function Hero() {
               </button>
               
               <button 
-                className="bg-gradient-to-r from-yellow-400 to-purple-500 text-white px-6 py-4 rounded-full font-bold animate-pulse hover:from-yellow-500 hover:to-purple-600 transition-all duration-300 shadow-lg"
+                className="bg-purple-500 text-white px-6 py-4 rounded-full font-bold hover:bg-purple-600 transition-all duration-300 shadow-lg"
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Limited Seat Available!
