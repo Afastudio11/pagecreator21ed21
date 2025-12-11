@@ -47,9 +47,12 @@ export function Hero() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               
-              <p className="text-sm text-red-500 font-semibold animate-pulse">
+              <button 
+                className="bg-gradient-to-r from-yellow-400 to-purple-500 text-white px-6 py-4 rounded-full font-bold animate-pulse hover:from-yellow-500 hover:to-purple-600 transition-all duration-300 shadow-lg"
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Limited Seat Available!
-              </p>
+              </button>
             </div>
           </div>
 
