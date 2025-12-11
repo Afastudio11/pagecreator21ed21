@@ -15,7 +15,7 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center max-w-6xl mx-auto">
           {LEARNING_POINTS.map((item, index) => (
             <motion.div
               key={index}
