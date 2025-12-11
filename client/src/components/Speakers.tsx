@@ -4,7 +4,7 @@ import { SPEAKERS } from "@/lib/constants";
 export function Speakers() {
   return (
     <section id="speakers" className="py-24 bg-secondary/30 border-y border-white/5">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Diajari Langsung Oleh <span className="text-gradient">3 Expert</span>

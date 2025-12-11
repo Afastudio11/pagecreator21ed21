@@ -4,7 +4,7 @@ import { MapPin, Phone, Instagram, Facebook, Globe } from "lucide-react";
 export function Footer() {
   return (
     <footer id="location" className="bg-secondary/20 border-t border-white/5 pt-16 pb-8">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center gap-12 mb-12">
           
           <div className="max-w-2xl mx-auto">
