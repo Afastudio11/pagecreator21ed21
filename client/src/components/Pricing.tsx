@@ -62,8 +62,8 @@ export function Pricing() {
                transition={{ duration: 0.5 }}
                viewport={{ once: true }}
              >
-                <Card className="relative overflow-hidden border-2 border-brand-purple bg-background/50 backdrop-blur-xl">
-                  <div className="absolute top-0 right-0 bg-brand-purple text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                <Card className="relative overflow-hidden border-2 border-brand-yellow bg-background/50 backdrop-blur-xl">
+                  <div className="absolute top-0 right-0 bg-brand-yellow text-black text-xs font-bold px-3 py-1 rounded-bl-lg">
                     BEST VALUE
                   </div>
                   <div className="p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -72,11 +72,11 @@ export function Pricing() {
                       <p className="text-sm text-muted-foreground mb-2">Harga spesial untuk pendaftar awal</p>
                       <div className="flex items-baseline gap-2">
                         <span className="text-sm text-muted-foreground line-through">IDR {EVENT_DETAILS.price.original}</span>
-                        <span className="text-3xl font-bold text-brand-purple">IDR {EVENT_DETAILS.price.promo}</span>
+                        <span className="text-3xl font-bold text-brand-yellow">IDR {EVENT_DETAILS.price.promo}</span>
                       </div>
                     </div>
                     <Button 
-                      className="w-full md:w-auto bg-brand-purple hover:bg-brand-purple/90"
+                      className="w-full md:w-auto bg-brand-yellow text-black hover:bg-brand-yellow/90 font-bold"
                       onClick={() => window.open(`https://wa.me/${EVENT_DETAILS.contact.replace(/[^0-9]/g, '')}?text=Halo%20Admin,%20saya%20mau%20daftar%20Early%20Bird%20Workshop`, '_blank')}
                     >
                       Daftar Sekarang

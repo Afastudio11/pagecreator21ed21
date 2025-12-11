@@ -15,7 +15,7 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {LEARNING_POINTS.map((item, index) => (
             <motion.div
               key={index}
@@ -23,6 +23,7 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className={index === 4 ? "md:col-span-2 lg:col-span-1 lg:col-start-2" : ""}
             >
               <Card className="h-full bg-white/5 border-white/10 hover:bg-white/10 transition-colors group">
                 <CardContent className="p-6 space-y-4">

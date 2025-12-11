@@ -42,6 +42,7 @@
   --color-brand-purple: hsl(265 89% 66%);
   --color-brand-pink: hsl(319 90% 64%);
   --color-brand-cyan: hsl(190 90% 50%);
+  --color-brand-yellow: hsl(50 90% 57%); /* #f2cc30 */
 
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
@@ -90,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-brand-purple via-brand-pink to-brand-purple;
+  @apply bg-clip-text text-transparent bg-linear-to-r from-brand-yellow via-brand-pink to-brand-purple;
 }
 
 .glass-card {
