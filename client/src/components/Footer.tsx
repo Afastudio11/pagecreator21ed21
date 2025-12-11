@@ -62,8 +62,8 @@ export function Footer() {
                 <Phone className="w-4 h-4" />
                 {EVENT_DETAILS.contact}
               </li>
-              <li className="hover:text-white cursor-pointer flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
+              <li className="hover:text-white cursor-pointer flex items-start gap-2">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 {EVENT_DETAILS.address}
               </li>
             </ul>

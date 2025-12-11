@@ -6,6 +6,7 @@ import { Features } from "@/components/Features";
 import { Speakers } from "@/components/Speakers";
 import { Pricing } from "@/components/Pricing";
 import { Footer } from "@/components/Footer";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 export default function Home() {
   return (
@@ -13,13 +14,25 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Marquee />
-        <Stats />
-        <Features />
-        <Speakers />
-        <Pricing />
+        <AnimatedSection>
+          <Marquee />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Stats />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Features />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Speakers />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Pricing />
+        </AnimatedSection>
       </main>
-      <Footer />
+      <AnimatedSection>
+        <Footer />
+      </AnimatedSection>
     </div>
   );
 }
