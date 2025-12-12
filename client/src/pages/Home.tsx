@@ -6,7 +6,6 @@ import { PainPoints } from "@/components/PainPoints";
 import { Features } from "@/components/Features";
 import { EventDetails } from "@/components/EventDetails";
 import { Speakers } from "@/components/Speakers";
-import { Bonuses } from "@/components/Bonuses";
 import { Prizes } from "@/components/Prizes";
 import { Testimonials } from "@/components/Testimonials";
 import { Pricing } from "@/components/Pricing";
@@ -37,9 +36,6 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <Speakers />
-        </AnimatedSection>
-        <AnimatedSection>
-          <Bonuses />
         </AnimatedSection>
         <AnimatedSection>
           <Prizes />
