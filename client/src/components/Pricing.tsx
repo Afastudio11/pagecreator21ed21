@@ -1,8 +1,44 @@
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
 import { EVENT_DETAILS } from "@/lib/constants";
 import { Star } from "lucide-react";
 
+function useCountdown(targetDate: Date) {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date().getTime();
+      const target = targetDate.getTime();
+      const difference = target - now;
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  return timeLeft;
+}
+
 export function Pricing() {
+  const eventDate = new Date("2025-01-31T10:00:00+07:00");
+  const { days, hours, minutes, seconds } = useCountdown(eventDate);
+
   return (
     <section id="pricing" className="bg-black py-24 text-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -44,6 +80,31 @@ export function Pricing() {
                   <span className="font-medium">{benefit}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="bg-gradient-to-r from-yellow-400/20 to-yellow-400/5 p-6 rounded-2xl border border-yellow-400/30">
+              <div className="flex items-center gap-2 mb-4">
+                <Clock className="w-5 h-5 text-yellow-400" />
+                <span className="text-yellow-400 font-semibold text-sm uppercase tracking-wider">Promo Berakhir Dalam</span>
+              </div>
+              <div className="grid grid-cols-4 gap-3 text-center">
+                <div className="bg-black/50 rounded-xl p-3">
+                  <div className="text-3xl md:text-4xl font-bold text-white">{String(days).padStart(2, '0')}</div>
+                  <div className="text-xs text-gray-400 uppercase mt-1">Hari</div>
+                </div>
+                <div className="bg-black/50 rounded-xl p-3">
+                  <div className="text-3xl md:text-4xl font-bold text-white">{String(hours).padStart(2, '0')}</div>
+                  <div className="text-xs text-gray-400 uppercase mt-1">Jam</div>
+                </div>
+                <div className="bg-black/50 rounded-xl p-3">
+                  <div className="text-3xl md:text-4xl font-bold text-white">{String(minutes).padStart(2, '0')}</div>
+                  <div className="text-xs text-gray-400 uppercase mt-1">Menit</div>
+                </div>
+                <div className="bg-black/50 rounded-xl p-3">
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-400">{String(seconds).padStart(2, '0')}</div>
+                  <div className="text-xs text-gray-400 uppercase mt-1">Detik</div>
+                </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
