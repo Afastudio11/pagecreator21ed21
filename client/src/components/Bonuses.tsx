@@ -20,7 +20,7 @@ export function Bonuses() {
                 key={index}
                 className="bg-black p-6 rounded-2xl border border-white/10 hover:border-yellow-400/50 transition-all group"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-yellow-400/10 rounded-xl flex items-center justify-center group-hover:bg-yellow-400/20 transition-colors text-2xl">
                     {bonus.emoji}
                   </div>
