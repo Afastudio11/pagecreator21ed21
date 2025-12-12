@@ -3,7 +3,7 @@ import { ArrowUpRight, CheckCircle2, Clock, Gift, Utensils, Ticket, BookOpen } f
 import { EVENT_DETAILS } from "@/lib/constants";
 import { Star } from "lucide-react";
 
-const EVENT_DATE = new Date("2025-01-31T10:00:00+07:00");
+const EVENT_DATE = new Date("2026-01-31T10:00:00+07:00");
 
 function useCountdown() {
   const [timeLeft, setTimeLeft] = useState({
