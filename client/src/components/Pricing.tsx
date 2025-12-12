@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Clock, Gift, Utensils, Ticket, BookOpen } from "lucide-react";
 import { EVENT_DETAILS } from "@/lib/constants";
 import { Star } from "lucide-react";
 
-function useCountdown(targetDate: Date) {
+const EVENT_DATE = new Date("2025-01-31T10:00:00+07:00");
+
+function useCountdown() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -14,7 +16,7 @@ function useCountdown(targetDate: Date) {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date().getTime();
-      const target = targetDate.getTime();
+      const target = EVENT_DATE.getTime();
       const difference = target - now;
 
       if (difference > 0) {
@@ -24,20 +26,23 @@ function useCountdown(targetDate: Date) {
           minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((difference % (1000 * 60)) / 1000)
         });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
 
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, []);
 
   return timeLeft;
 }
 
+const bonusIcons = [Gift, Utensils, Ticket, BookOpen];
+
 export function Pricing() {
-  const eventDate = new Date("2025-01-31T10:00:00+07:00");
-  const { days, hours, minutes, seconds } = useCountdown(eventDate);
+  const { days, hours, minutes, seconds } = useCountdown();
 
   return (
     <section id="pricing" className="bg-black py-24 text-white">
@@ -65,21 +70,12 @@ export function Pricing() {
             </div>
           </div>
 
-          <div className="space-y-12 lg:pt-12">
+          <div className="space-y-8 lg:pt-12">
             <div className="flex gap-4">
               <Star className="text-yellow-400 w-8 h-8 flex-shrink-0 fill-yellow-400 animate-spin-slow" />
               <p className="text-lg text-gray-400 leading-relaxed">
                 Dapatkan akses penuh ke workshop, materi eksklusif, dan kesempatan networking dengan para expert industri.
               </p>
-            </div>
-
-            <div className="space-y-4">
-              {EVENT_DETAILS.benefits.map((benefit, i) => (
-                <div key={i} className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                  <span className="font-medium">{benefit}</span>
-                </div>
-              ))}
             </div>
 
             <div className="bg-gradient-to-r from-yellow-400/20 to-yellow-400/5 p-6 rounded-2xl border border-yellow-400/30">
@@ -142,6 +138,25 @@ export function Pricing() {
                 >
                   Klaim Promo <ArrowUpRight className="w-4 h-4" />
                 </button>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">
+                BONUS SPESIAL <span className="text-yellow-400">UNTUK SELURUH PESERTA</span>
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {EVENT_DETAILS.benefits.map((benefit, i) => {
+                  const IconComponent = bonusIcons[i];
+                  return (
+                    <div key={i} className="bg-brand-gray/50 p-4 rounded-xl border border-white/10 hover:border-yellow-400/50 transition-all group flex items-start gap-3">
+                      <div className="w-10 h-10 bg-yellow-400/10 rounded-lg flex items-center justify-center group-hover:bg-yellow-400/20 transition-colors flex-shrink-0">
+                        <IconComponent className="w-5 h-5 text-yellow-400" />
+                      </div>
+                      <span className="text-white font-medium text-sm">{benefit}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

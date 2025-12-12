@@ -18,7 +18,6 @@ export function EventDetails() {
             <div className="w-16 h-16 bg-brand-purple/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-purple/30 transition-colors">
               <Calendar className="w-8 h-8 text-brand-purple" />
             </div>
-            <div className="text-2xl mb-2">📅</div>
             <h3 className="text-white font-bold text-xl mb-2">31 Januari 2025</h3>
             <p className="text-gray-400">Hari Jumat</p>
           </div>
@@ -27,7 +26,6 @@ export function EventDetails() {
             <div className="w-16 h-16 bg-brand-purple/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-purple/30 transition-colors">
               <Clock className="w-8 h-8 text-brand-purple" />
             </div>
-            <div className="text-2xl mb-2">🕙</div>
             <h3 className="text-white font-bold text-xl mb-2">10:00 – 13:00 WIB</h3>
             <p className="text-gray-400">3 Jam Intensif</p>
           </div>
@@ -36,7 +34,6 @@ export function EventDetails() {
             <div className="w-16 h-16 bg-brand-purple/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-purple/30 transition-colors">
               <MapPin className="w-8 h-8 text-brand-purple" />
             </div>
-            <div className="text-2xl mb-2">📍</div>
             <h3 className="text-white font-bold text-xl mb-2">SAE Indonesia</h3>
             <p className="text-gray-400">Pejaten Raya No.31, Pasar Minggu, Jakarta Selatan</p>
           </div>

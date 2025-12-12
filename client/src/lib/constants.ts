@@ -18,10 +18,10 @@ export const EVENT_DETAILS = {
     special: "179.000", // Daftar bareng 5 orang
   },
   benefits: [
-    "🎒 Free Goodie Bag Eksklusif",
-    "🍱 Free Lunch",
-    "🎟 Voucher Diskon Jasa Fine Creative Senilai Jutaan Rupiah",
-    "📘 Booklet Premium \"Unique Marketing Signature\" (senilai 149K) - Khusus untuk 20 peserta tercepat"
+    "Free Goodie Bag Eksklusif",
+    "Free Lunch",
+    "Voucher Diskon Jasa Fine Creative Senilai Jutaan Rupiah",
+    "Booklet Premium \"Unique Marketing Signature\" (senilai 149K) - Khusus untuk 20 peserta tercepat"
   ],
   targetAudience: [
     "Pemilik bisnis F&B",
