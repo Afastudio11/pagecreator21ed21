@@ -19,12 +19,6 @@ export function Features() {
             APA YANG AKAN KAMU PELAJARI?
           </h2>
           <p className="text-gray-400 mb-4">Dalam 3 jam intensif, kamu akan menguasai:</p>
-          <div className="flex flex-wrap gap-2 mb-8">
-            <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Pemilik bisnis F&B</span>
-            <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Content Creator</span>
-            <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Affiliate</span>
-            <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Tim Marketing Brand F&B</span>
-          </div>
 
           <div className="space-y-4">
             {LEARNING_POINTS.map((service, index) => (
@@ -55,6 +49,16 @@ export function Features() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 p-4 bg-yellow-400/10 rounded-xl border border-yellow-400/30">
+            <p className="text-yellow-400 font-semibold mb-2">Cocok untuk:</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Pemilik bisnis F&B</span>
+              <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Content Creator</span>
+              <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Affiliate</span>
+              <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Tim Marketing Brand F&B</span>
+            </div>
           </div>
         </div>
 

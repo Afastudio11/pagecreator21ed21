@@ -34,28 +34,28 @@ export const EVENT_DETAILS = {
 export const LEARNING_POINTS = [
   {
     icon: Video,
-    title: "Konten F&B yang Viral & Menjual",
+    title: "Strategi membuat konten F&B yang gak cuma viral, tapi juga menjual.",
     description: "Framework konten organik yang terbukti ningkatin reach & transaksi."
   },
   {
     icon: TrendingUp,
-    title: "Mindset & Ekosistem TikTok & Shopee",
-    description: "Cara kerja algoritma dan cara optimasinya sebagai mesin penjualan digital."
+    title: "Mindset & ekosistem TikTok & Shopee sebagai mesin penjualan digital.",
+    description: "Cara kerja algoritma → cara optimasinya."
   },
   {
     icon: Users,
-    title: "Program Affiliate sebagai Mesin Transaksi",
+    title: "Cara memaksimalkan program Affiliate sebagai mesin transaksi otomatis.",
     description: "Cara rekrut, kelola, dan evaluasi affiliator/kreator."
   },
   {
     icon: ShieldCheck,
-    title: "Legalitas Brand",
-    description: "Apa yang wajib ada sebelum ekspansi online/offline sebagai pondasi scale up."
+    title: "Legalitas brand sebagai pondasi sebelum scale up.",
+    description: "Apa yang wajib ada sebelum ekspansi online/offline."
   },
   {
     icon: TrendingUp,
-    title: "Strategi Growth",
-    description: "Sistem marketing yang repeatable dari awareness ke omzet, bukan coba-coba."
+    title: "Cara merangkai strategi growth dari awareness → omzet.",
+    description: "Sistem marketing yang repeatable, bukan coba-coba."
   }
 ];
 
@@ -95,10 +95,10 @@ export const PAIN_POINTS = [
 ];
 
 export const BONUSES = [
-  { icon: "gift", title: "Free Goodie Bag Eksklusif" },
-  { icon: "utensils", title: "Free Lunch" },
-  { icon: "ticket", title: "Voucher Diskon Jasa Fine Creative Senilai Jutaan Rupiah" },
-  { icon: "book", title: "Booklet Premium \"Unique Marketing Signature\" (senilai 149K)", note: "Khusus untuk 20 peserta tercepat" }
+  { icon: "gift", title: "Free Goodie Bag Eksklusif", emoji: "🎒" },
+  { icon: "utensils", title: "Free Lunch", emoji: "🍱" },
+  { icon: "ticket", title: "Voucher Diskon Jasa Fine Creative Senilai Jutaan Rupiah", emoji: "🎟" },
+  { icon: "book", title: "Booklet Premium \"Unique Marketing Signature\" (senilai 149K)", note: "Khusus untuk 20 peserta tercepat.", emoji: "📘" }
 ];
 
 export const PRIZES = [
@@ -139,6 +139,14 @@ export const TESTIMONIALS = [
   {
     quote: "Penjelasannya simple tapi praktikal, langsung bisa dipraktikkan untuk brand kami.",
     author: "Team Marketing F&B"
+  },
+  {
+    quote: "Materinya daging semua, gak ada yang basa-basi. Langsung ke strategi yang bisa diterapkan besok.",
+    author: "Content Creator"
+  },
+  {
+    quote: "Baru kali ini ikut workshop yang speakernya beneran praktisi, bukan cuma teori. Worth it banget!",
+    author: "Affiliate Marketer"
   }
 ];
 
