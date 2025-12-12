@@ -38,7 +38,7 @@ export function CaseStudy() {
                 </h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {caseStudy1Images.map((image, index) => (
                   <div 
                     key={index}
@@ -84,10 +84,13 @@ export function CaseStudy() {
         >
           <button 
             onClick={() => setSelectedImage(null)}
-            className="absolute top-6 right-6 text-white hover:text-brand-purple transition-colors"
+            className="absolute top-6 right-6 bg-white/20 hover:bg-brand-purple text-white p-3 rounded-full transition-colors"
           >
-            <X className="w-10 h-10" />
+            <X className="w-8 h-8" />
           </button>
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/20 text-white px-4 py-2 rounded-full text-sm">
+            Klik di mana saja atau tombol X untuk menutup
+          </div>
           <img 
             src={selectedImage} 
             alt="Full size view"
