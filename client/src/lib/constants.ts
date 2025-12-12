@@ -7,7 +7,7 @@ import speaker3 from "@assets/3_1765434496028.png"; // Muhammad (Black suit)
 export const EVENT_DETAILS = {
   title: "F&B TikTok & Affiliate Strategy",
   subtitle: "Ingin jualan F&B tembus jutaan lewat konten TikTok & Affiliate?",
-  date: "Sabtu, 31 Januari 2025",
+  date: "Sabtu, 31 Januari 2026",
   time: "10:00 - 13:00 WIB",
   location: "SAE Indonesia",
   address: "Jl. Pejaten Raya No.31, Pasar Minggu, Kota Jakarta Selatan",
