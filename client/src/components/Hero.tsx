@@ -11,16 +11,16 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 relative z-10">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
-              Ingin Jualan F&B Tembus <span className="relative inline-block">
+              Ingin Omzet Jualan F&B Tembus <span className="relative inline-block">
                 Jutaan
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-yellow-400" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
                 </svg>
-              </span> Lewat TikTok?
+              </span> Lewat Konten Organik & Affiliate TikTok/Shopee?
             </h1>
             
             <p className="text-lg text-gray-600 max-w-md leading-relaxed">
-              Pelajari strategi growth dari awareness ke omzet langsung dari 3 expert industri. Jangan sampai ketinggalan momentum digital 2025!
+              Bangun strategi konten yang bukan cuma viral, tapi beneran ngasih penjualan, ditambah cara memaksimalkan TikTok & Shopee Affiliate sebagai mesin transaksi otomatis.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 text-sm">

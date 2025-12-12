@@ -15,9 +15,16 @@ export function Features() {
           <div className="inline-block bg-brand-purple text-white px-4 py-1 rounded-full text-sm font-bold uppercase mb-4">
             Materi Workshop
           </div>
-          <h2 className="text-4xl font-bold text-white mb-8">
-            Kurikulum komprehensif untuk scale up bisnis F&B Anda di era digital.
+          <h2 className="text-4xl font-bold text-white mb-4">
+            APA YANG AKAN KAMU PELAJARI?
           </h2>
+          <p className="text-gray-400 mb-4">Dalam 3 jam intensif, kamu akan menguasai:</p>
+          <div className="flex flex-wrap gap-2 mb-8">
+            <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Pemilik bisnis F&B</span>
+            <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Content Creator</span>
+            <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Affiliate</span>
+            <span className="text-xs bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full">Tim Marketing Brand F&B</span>
+          </div>
 
           <div className="space-y-4">
             {LEARNING_POINTS.map((service, index) => (

@@ -10,8 +10,8 @@ export function Footer() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400/10 blur-[80px] rounded-full pointer-events-none"></div>
           
           <div className="z-10 text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Amankan Kursi Anda!</h2>
-            <p className="text-gray-400 max-w-md">Bergabunglah dengan ratusan pebisnis F&B lainnya dan mulailah transformasi digital bisnis Anda hari ini.</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Siap Boost Omzet Jualan F&B?</h2>
+            <p className="text-gray-400 max-w-md">Jangan tunggu sampai seat penuh - amankan kursimu sekarang dan mulai tingkatkan omzet lewat konten & affiliate.</p>
           </div>
 
           <div className="z-10">
