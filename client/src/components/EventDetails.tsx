@@ -18,8 +18,8 @@ export function EventDetails() {
             <div className="w-16 h-16 bg-brand-purple/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-purple/30 transition-colors">
               <Calendar className="w-8 h-8 text-brand-purple" />
             </div>
-            <h3 className="text-white font-bold text-xl mb-2">31 Januari 2025</h3>
-            <p className="text-gray-400">Hari Jumat</p>
+            <h3 className="text-white font-bold text-xl mb-2">31 Januari 2026</h3>
+            <p className="text-gray-400">Hari Sabtu</p>
           </div>
 
           <div className="bg-black p-8 rounded-2xl border border-white/10 hover:border-brand-purple/50 transition-all group text-center">
