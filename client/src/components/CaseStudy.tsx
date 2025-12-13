@@ -3,6 +3,8 @@ import { X, ZoomIn } from "lucide-react";
 import caseStudy1a from "@assets/1_1765532934583.jpg";
 import caseStudy1b from "@assets/2_1765532934583.jpg";
 import caseStudy1c from "@assets/3_1765532934582.jpg";
+import caseStudy2a from "@assets/Cover_1_copy_1765620420692.png";
+import caseStudy2b from "@assets/9_1765620420691.png";
 
 export function CaseStudy() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -11,6 +13,11 @@ export function CaseStudy() {
     { src: caseStudy1a, alt: "Strategy Content Storytelling - Success Rate 80%, 600+ brands" },
     { src: caseStudy1b, alt: "Bakeport.id - 12.000 followers organik dalam 3 bulan" },
     { src: caseStudy1c, alt: "Sweetness Delish - 4 juta views, 796 penjualan" },
+  ];
+
+  const caseStudy2Images = [
+    { src: caseStudy2a, alt: "OkkingBotol - 215 affiliator dari Exclusive Campaign Shopee Video" },
+    { src: caseStudy2b, alt: "Yosef Abas - Exclusive Campaign dampak jangka panjang" },
   ];
 
   return (
@@ -69,8 +76,26 @@ export function CaseStudy() {
                 </h3>
               </div>
               
-              <div className="bg-brand-gray/30 rounded-2xl p-12 border border-white/10 text-center">
-                <p className="text-gray-400 text-xl">Screenshot menyusul</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {caseStudy2Images.map((image, index) => (
+                  <div 
+                    key={index}
+                    onClick={() => setSelectedImage(image.src)}
+                    className="rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all cursor-pointer group relative"
+                  >
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-auto object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-yellow-400 text-black px-4 py-2 rounded-full flex items-center gap-2">
+                        <ZoomIn className="w-5 h-5" />
+                        <span className="font-semibold">Klik untuk memperbesar</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
