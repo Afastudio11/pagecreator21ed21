@@ -1,5 +1,8 @@
-import { ArrowRight, Clock, MapPin, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { EVENT_DETAILS } from "@/lib/constants";
+import calendarIcon from "@assets/1_1765627710229.png";
+import clockIcon from "@assets/2_1765627710229.png";
+import locationIcon from "@assets/3_1765627710229.png";
 
 export function Hero() {
   return (
@@ -25,15 +28,15 @@ export function Hero() {
 
             <div className="flex flex-wrap items-center gap-3 text-sm">
               <div className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
-                <Calendar className="w-4 h-4" />
+                <img src={calendarIcon} alt="Calendar" className="w-5 h-5 object-contain" />
                 {EVENT_DETAILS.date}
               </div>
               <div className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
-                <Clock className="w-4 h-4" />
+                <img src={clockIcon} alt="Clock" className="w-5 h-5 object-contain" />
                 {EVENT_DETAILS.time}
               </div>
               <div className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
-                <MapPin className="w-4 h-4" />
+                <img src={locationIcon} alt="Location" className="w-5 h-5 object-contain" />
                 {EVENT_DETAILS.location}
               </div>
             </div>
