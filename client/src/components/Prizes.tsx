@@ -1,10 +1,13 @@
-import { Trophy, Medal, Award, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { PRIZES } from "@/lib/constants";
+import goldMedal from "@assets/Salinan_dari_Deck_USA(3)_1765628067614.png";
+import silverMedal from "@assets/Salinan_dari_Deck_USA(4)_1765628067614.png";
+import bronzeMedal from "@assets/Salinan_dari_Deck_USA(1)_1765628067614.png";
 
-const medalIcons: Record<string, { icon: React.ElementType; color: string; bg: string }> = {
-  gold: { icon: Trophy, color: "text-yellow-400", bg: "bg-yellow-400/20 border-yellow-400/50" },
-  silver: { icon: Medal, color: "text-gray-300", bg: "bg-gray-300/20 border-gray-300/50" },
-  bronze: { icon: Award, color: "text-amber-600", bg: "bg-amber-600/20 border-amber-600/50" },
+const medalImages: Record<string, { image: string; color: string; bg: string }> = {
+  gold: { image: goldMedal, color: "text-yellow-400", bg: "bg-yellow-400/20 border-yellow-400/50" },
+  silver: { image: silverMedal, color: "text-gray-300", bg: "bg-gray-300/20 border-gray-300/50" },
+  bronze: { image: bronzeMedal, color: "text-amber-600", bg: "bg-amber-600/20 border-amber-600/50" },
 };
 
 const rankLabels: Record<number, string> = { 1: "Juara 1", 2: "Juara 2", 3: "Juara 3" };
@@ -23,11 +26,11 @@ export function Prizes() {
           {/* Juara 2 - Left */}
           {(() => {
             const prize = PRIZES[1];
-            const { icon: IconComponent, color, bg } = medalIcons[prize.medal];
+            const { image, color, bg } = medalImages[prize.medal];
             return (
               <div className={`p-6 rounded-2xl border transition-all ${bg} md:order-1`}>
                 <div className="text-center mb-6">
-                  <IconComponent className={`w-12 h-12 ${color} mx-auto mb-3`} />
+                  <img src={image} alt="Silver Medal" className="w-16 h-16 mx-auto mb-3 object-contain" />
                   <h3 className={`text-2xl font-bold ${color}`}>{rankLabels[prize.rank]}</h3>
                 </div>
                 <div className="space-y-3">
@@ -45,11 +48,11 @@ export function Prizes() {
           {/* Juara 1 - Center */}
           {(() => {
             const prize = PRIZES[0];
-            const { icon: IconComponent, color, bg } = medalIcons[prize.medal];
+            const { image, color, bg } = medalImages[prize.medal];
             return (
               <div className={`p-6 rounded-2xl border transition-all ${bg} md:order-2 md:-mt-4 md:pb-10 md:scale-105`}>
                 <div className="text-center mb-6">
-                  <IconComponent className={`w-12 h-12 ${color} mx-auto mb-3`} />
+                  <img src={image} alt="Gold Medal" className="w-20 h-20 mx-auto mb-3 object-contain" />
                   <h3 className={`text-2xl font-bold ${color}`}>{rankLabels[prize.rank]}</h3>
                 </div>
                 <div className="space-y-3">
@@ -67,11 +70,11 @@ export function Prizes() {
           {/* Juara 3 - Right */}
           {(() => {
             const prize = PRIZES[2];
-            const { icon: IconComponent, color, bg } = medalIcons[prize.medal];
+            const { image, color, bg } = medalImages[prize.medal];
             return (
               <div className={`p-6 rounded-2xl border transition-all ${bg} md:order-3`}>
                 <div className="text-center mb-6">
-                  <IconComponent className={`w-12 h-12 ${color} mx-auto mb-3`} />
+                  <img src={image} alt="Bronze Medal" className="w-16 h-16 mx-auto mb-3 object-contain" />
                   <h3 className={`text-2xl font-bold ${color}`}>{rankLabels[prize.rank]}</h3>
                 </div>
                 <div className="space-y-3">
