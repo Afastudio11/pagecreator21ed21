@@ -11,8 +11,8 @@ export function Hero() {
         
         <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400/20 blur-[100px] rounded-full pointer-events-none" />
 
-        <div className="flex flex-col gap-12">
-          <div className="space-y-8 relative z-10">
+        <div className="flex flex-col gap-12 items-center">
+          <div className="space-y-8 relative z-10 text-center max-w-4xl">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
                 Frustasi Omzet Jualan Gak Naik-naik?
@@ -30,11 +30,11 @@ export function Hero() {
               </h3>
             </div>
             
-            <p className="text-lg text-gray-600 max-w-md leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Bangun strategi konten yang bukan cuma viral, tapi beneran ngasih penjualan, ditambah cara memaksimalkan TikTok & Shopee Affiliate sebagai mesin transaksi otomatis.
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
               <div className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
                 <img src={calendarIcon} alt="Calendar" className="w-5 h-5 object-contain" />
                 {EVENT_DETAILS.date}
@@ -49,7 +49,7 @@ export function Hero() {
               </div>
             </div>
             
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <button 
                 className="bg-black text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-gray-800 transition-all duration-300 shadow-lg group"
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
@@ -67,7 +67,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative w-full rounded-2xl overflow-hidden">
+          <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden">
             <img 
               src="/WhatsApp_Image_2025-12-19_at_18.36.30_1766159609631.jpeg"
               alt="Event Livestream Performance"
