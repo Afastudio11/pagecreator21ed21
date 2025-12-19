@@ -13,14 +13,22 @@ export function Hero() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 relative z-10">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
-              Ingin Omzet Jualan F&B Tembus <span className="relative inline-block">
-                Jutaan
-                <svg className="absolute w-full h-3 -bottom-1 left-0 text-yellow-400" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
-                </svg>
-              </span> Lewat Konten Organik & Affiliate TikTok/Shopee?
-            </h1>
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
+                Frustasi Omzet Jualan Gak Naik-naik?
+              </h1>
+              <h2 className="text-3xl md:text-5xl font-bold leading-[1.2] tracking-tight">
+                Pelajari Rahasia Tembus <span className="relative inline-block">
+                  Untung Jutaan
+                  <svg className="absolute w-full h-3 -bottom-1 left-0 text-yellow-400" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+                  </svg>
+                </span> Lewat Konten & Affiliate
+              </h2>
+              <h3 className="text-2xl md:text-3xl font-semibold leading-[1.2]">
+                Lewat Seminar Bareng 3 Expert Marketing & Tiktok Official Partner
+              </h3>
+            </div>
             
             <p className="text-lg text-gray-600 max-w-md leading-relaxed">
               Bangun strategi konten yang bukan cuma viral, tapi beneran ngasih penjualan, ditambah cara memaksimalkan TikTok & Shopee Affiliate sebagai mesin transaksi otomatis.
