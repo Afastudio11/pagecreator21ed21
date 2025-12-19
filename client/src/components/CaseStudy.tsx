@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { X, ZoomIn } from "lucide-react";
 import caseStudy1a from "@assets/1_1766161740117.png";
-import caseStudy1b from "@assets/3_1766161740118.png";
-import caseStudy1c from "@assets/4_1766161740117.png";
+import caseStudy1b from "@assets/2_1766161740118.png";
+import caseStudy1c from "@assets/3_1766161740118.png";
+import caseStudy1d from "@assets/4_1766161740117.png";
 import caseStudy2a from "@assets/Cover_1_copy_1765620420692.png";
 import caseStudy2b from "@assets/9_1765620420691.png";
 
@@ -11,8 +12,9 @@ export function CaseStudy() {
 
   const caseStudy1Images = [
     { src: caseStudy1a, alt: "Strategy Content Storytelling - Success Rate 80%, 600+ brands" },
-    { src: caseStudy1b, alt: "Bakeport.id - 12.000 followers organik dalam 3 bulan" },
-    { src: caseStudy1c, alt: "Sweetness Delish - 4 juta views, 796 penjualan" },
+    { src: caseStudy1b, alt: "Caramelt Patisserie - Fully booked, 11.8K followers" },
+    { src: caseStudy1c, alt: "Bakeport.id - 12.000 followers organik dalam 3 bulan" },
+    { src: caseStudy1d, alt: "Sweetness Delish - 4 juta views, 796 penjualan" },
   ];
 
   const caseStudy2Images = [
