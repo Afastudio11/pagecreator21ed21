@@ -11,7 +11,7 @@ export function Hero() {
         
         <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400/20 blur-[100px] rounded-full pointer-events-none" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col gap-12">
           <div className="space-y-8 relative z-10">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
@@ -67,14 +67,12 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md">
-              <img 
-                src="/hero-phone.png"
-                alt="Digital Marketing"
-                className="relative w-full h-auto object-contain z-10 hover:scale-[1.02] transition-transform duration-500"
-              />
-            </div>
+          <div className="relative w-full rounded-2xl overflow-hidden">
+            <img 
+              src="/WhatsApp_Image_2025-12-19_at_18.36.30_1766159609631.jpeg"
+              alt="Event Livestream Performance"
+              className="w-full h-auto object-cover z-10"
+            />
           </div>
         </div>
       </div>
