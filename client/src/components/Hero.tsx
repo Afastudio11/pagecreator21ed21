@@ -3,6 +3,7 @@ import { EVENT_DETAILS } from "@/lib/constants";
 import calendarIcon from "@assets/1_1765627710229.png";
 import clockIcon from "@assets/2_1765627710229.png";
 import locationIcon from "@assets/3_1765627710229.png";
+import livestreamImage from "@assets/5_1766160924827.png";
 
 export function Hero() {
   return (
@@ -70,7 +71,7 @@ export function Hero() {
 
           <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden">
             <img 
-              src="/WhatsApp_Image_2025-12-19_at_18.36.30_1766159609631.jpeg"
+              src={livestreamImage}
               alt="Event Livestream Performance"
               className="w-full h-auto object-cover z-10"
             />
