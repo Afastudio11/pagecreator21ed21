@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
+import { PhotoGallery } from "@/components/PhotoGallery";
 import { Stats } from "@/components/Stats";
 import { PainPoints } from "@/components/PainPoints";
 import { Features } from "@/components/Features";
@@ -25,6 +26,9 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <PainPoints />
+        </AnimatedSection>
+        <AnimatedSection>
+          <PhotoGallery />
         </AnimatedSection>
         <AnimatedSection>
           <Stats />
