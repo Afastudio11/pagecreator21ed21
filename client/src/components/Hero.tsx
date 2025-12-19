@@ -14,9 +14,8 @@ export function Hero() {
         <div className="flex flex-col gap-12 items-center">
           <div className="space-y-8 relative z-10 text-center max-w-4xl">
             <div className="space-y-2">
-              <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
-                Frustasi Omzet Jualan Gak Naik-naik?
-              </h1>
+              <h1 className="md:text-7xl font-extrabold tracking-tight text-[79px]">Frustasi Omzet Jualan 
+              Gak Naik-naik?</h1>
               <div className="space-y-0">
                 <h2 className="text-2xl md:text-3xl font-semibold leading-[1.2] tracking-tight">
                   Pelajari Rahasia Tembus <span className="relative inline-block">
