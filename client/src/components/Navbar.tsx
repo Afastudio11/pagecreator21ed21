@@ -48,7 +48,7 @@ export function Navbar() {
         <div className="flex items-center gap-1 md:gap-2">
           <button 
             className="btn-fancy text-[10px] md:text-sm py-1.5 px-3 md:py-3 md:px-6"
-            onClick={() => handleScroll('#pricing')}
+            onClick={() => window.open('https://fine-creative.myr.id/pl/marketalkhsow-jualan-fnb-tembus-jutaan-lewat-affiiate-tiktok', '_blank')}
           >
             <span>Daftar Sekarang</span>
           </button>
@@ -76,7 +76,7 @@ export function Navbar() {
                 ))}
                 <button 
                   className="w-full btn-fancy"
-                  onClick={() => handleScroll('#pricing')}
+                  onClick={() => window.open('https://fine-creative.myr.id/pl/marketalkhsow-jualan-fnb-tembus-jutaan-lewat-affiiate-tiktok', '_blank')}
                 >
                   <span>Daftar Sekarang</span>
                 </button>

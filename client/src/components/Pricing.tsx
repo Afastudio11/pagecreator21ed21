@@ -116,7 +116,7 @@ export function Pricing() {
                 </div>
                 <button 
                   className="w-full btn-fancy py-3"
-                  onClick={() => window.open(`https://wa.me/${EVENT_DETAILS.contact.replace(/[^0-9]/g, '')}?text=Halo%20Admin,%20saya%20mau%20daftar%20Early%20Bird%20Workshop`, '_blank')}
+                  onClick={() => window.open('https://fine-creative.myr.id/pl/marketalkhsow-jualan-fnb-tembus-jutaan-lewat-affiiate-tiktok', '_blank')}
                 >
                   <span>Daftar Sekarang</span> <ArrowUpRight className="w-4 h-4" />
                 </button>
@@ -134,7 +134,7 @@ export function Pricing() {
                 </div>
                 <button 
                   className="w-full bg-white/10 text-white py-3 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-yellow-400 hover:text-black transition-all"
-                  onClick={() => window.open(`https://wa.me/${EVENT_DETAILS.contact.replace(/[^0-9]/g, '')}?text=Halo%20Admin,%20saya%20mau%20daftar%20Group%20Package%20Workshop`, '_blank')}
+                  onClick={() => window.open('https://fine-creative.myr.id/pl/marketalkhsow-jualan-fnb-tembus-jutaan-lewat-affiiate-tiktok', '_blank')}
                 >
                   Klaim Promo <ArrowUpRight className="w-4 h-4" />
                 </button>

@@ -17,7 +17,7 @@ export function Footer() {
           <div className="z-10">
             <button 
               className="btn-fancy px-8 py-4 text-lg"
-              onClick={() => window.open(`https://wa.me/${EVENT_DETAILS.contact.replace(/[^0-9]/g, '')}`, '_blank')}
+              onClick={() => window.open('https://fine-creative.myr.id/pl/marketalkhsow-jualan-fnb-tembus-jutaan-lewat-affiiate-tiktok', '_blank')}
             >
               <span>Daftar Sekarang</span>
               <ArrowRight className="w-5 h-5" />
