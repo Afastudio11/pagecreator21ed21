@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { X, ZoomIn } from "lucide-react";
-import caseStudy1a from "@assets/1_1765532934583.jpg";
-import caseStudy1b from "@assets/2_1765532934583.jpg";
-import caseStudy1c from "@assets/3_1765532934582.jpg";
+import caseStudy1a from "@assets/1_1766161740117.png";
+import caseStudy1b from "@assets/3_1766161740118.png";
+import caseStudy1c from "@assets/4_1766161740117.png";
 import caseStudy2a from "@assets/Cover_1_copy_1765620420692.png";
 import caseStudy2b from "@assets/9_1765620420691.png";
 
