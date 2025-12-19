@@ -1,11 +1,23 @@
 import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 import { EVENT_DETAILS } from "@/lib/constants";
 import calendarIcon from "@assets/1_1765627710229.png";
 import clockIcon from "@assets/2_1765627710229.png";
 import locationIcon from "@assets/3_1765627710229.png";
-import livestreamImage from "@assets/5_1766160924827.png";
+import image1 from "@assets/4_1766161546555.png";
+import image2 from "@assets/5_1766161546555.png";
 
 export function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [image1, image2];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative bg-white text-black pt-32 pb-24 md:pt-40 md:pb-32 rounded-b-[3rem] md:rounded-b-[5rem] overflow-hidden z-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
@@ -70,11 +82,31 @@ export function Hero() {
           </div>
 
           <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden">
-            <img 
-              src={livestreamImage}
-              alt="Event Livestream Performance"
-              className="w-full h-auto object-cover z-10"
-            />
+            <div className="relative w-full h-auto">
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  className={`w-full h-auto object-cover transition-opacity duration-1000 ${
+                    index === currentSlide ? 'opacity-100' : 'opacity-0 absolute inset-0'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentSlide ? 'bg-yellow-400 w-8' : 'bg-gray-400'
+                  }`}
+                  data-testid={`button-slide-${index}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
