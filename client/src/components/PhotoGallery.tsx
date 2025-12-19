@@ -43,15 +43,6 @@ export function PhotoGallery() {
   return (
     <div className="bg-black py-16 md:py-24 border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Kenali Komunitas Kami
-          </h2>
-          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
-            Bergabung dengan ratusan peserta yang telah merasakan transformasi bisnis mereka
-          </p>
-        </div>
-
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {photos.map((photo) => (
             <div
