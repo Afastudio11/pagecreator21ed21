@@ -29,7 +29,7 @@ export function Hero() {
             <div className="space-y-2">
               <h1 className="md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[50px]">Frustasi Omzet Jualan 
               Gak Naik-naik?</h1>
-              <div className="space-y-0">
+              <div className="space-y-0 bg-gradient-to-b from-yellow-100/40 to-yellow-100/20 rounded-2xl md:rounded-3xl px-4 md:px-6 py-4 md:py-6">
                 <h2 className="text-base md:text-xl lg:text-3xl font-semibold leading-[1.2] tracking-tight">
                   Pelajari Rahasia Tembus <span className="relative inline-block">
                     Untung Jutaan
