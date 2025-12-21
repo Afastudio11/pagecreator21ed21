@@ -1,39 +1,45 @@
 import { ImageOff } from "lucide-react";
+import photo1 from "@assets/IMG_7781_1766158513942.PNG";
+import photo2 from "@assets/IMG_6429_1766158513942.jpg";
+import photo3 from "@assets/IMG_6437_1766158513943.jpg";
+import photo4 from "@assets/IMG_7780_1766158513943.PNG";
+import photo5 from "@assets/event_photo_5_1766333187446.jpg";
+import photo6 from "@assets/event_photo_6_1766333187446.jpg";
 
 const photos = [
   {
     id: 1,
-    src: "/IMG_7781_1766158513942.PNG",
+    src: photo1,
     alt: "Event Photo 1 - School of Creative Industries",
     title: "Workshop Session"
   },
   {
     id: 2,
-    src: "/IMG_6429_1766158513942.jpg",
+    src: photo2,
     alt: "Event Photo 2 - Speaker Presentation",
     title: "Presentation"
   },
   {
     id: 3,
-    src: "/IMG_6437_1766158513943.jpg",
+    src: photo3,
     alt: "Event Photo 3 - Panel Discussion",
     title: "Panel Discussion"
   },
   {
     id: 4,
-    src: "/IMG_7780_1766158513943.PNG",
+    src: photo4,
     alt: "Event Photo 4 - Audience",
     title: "Audience Engagement"
   },
   {
     id: 5,
-    src: "/event_photo_5.jpg",
+    src: photo5,
     alt: "Event Photo 5 - Masterclass Session",
     title: "Masterclass"
   },
   {
     id: 6,
-    src: "/event_photo_6.jpg",
+    src: photo6,
     alt: "Event Photo 6 - Speaker Presentation",
     title: "Expert Speaker"
   }
