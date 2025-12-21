@@ -27,7 +27,7 @@ export function Hero() {
         <div className="flex flex-col gap-12 items-center">
           <div className="space-y-8 relative z-10 text-center max-w-4xl">
             <div className="space-y-2">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">Frustasi Omzet Jualan 
+              <h1 className="md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[50px]">Frustasi Omzet Jualan 
               Gak Naik-naik?</h1>
               <div className="space-y-0">
                 <h2 className="text-base md:text-xl lg:text-3xl font-semibold leading-[1.2] tracking-tight">
