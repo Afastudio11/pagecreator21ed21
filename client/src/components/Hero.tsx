@@ -29,15 +29,15 @@ export function Hero() {
             <div className="space-y-2">
               <h1 className="md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[50px]">Frustasi Omzet Jualan 
               Gak Naik-naik?</h1>
-              <h2 className="text-base md:text-xl lg:text-3xl font-semibold leading-[1.2] tracking-tight">
+              <h2 className="text-base md:text-xl lg:text-3xl font-semibold leading-relaxed tracking-tight">
                 Pelajari Rahasia Tembus <span className="relative inline-block">
                   Untung Jutaan
                   <svg className="absolute w-full h-3 -bottom-1 left-0 text-yellow-400" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
                   </svg>
-                </span> Konten & Affiliate Lewat
-                <br />
-                Lewat Seminar Bareng 3 Expert Marketing & Tiktok Official Partner
+                </span>
+                {" "}
+                Konten & Affiliate Lewat Seminar Bareng 3 Expert Marketing & Tiktok Official Partner
               </h2>
             </div>
             
