@@ -27,10 +27,10 @@ export function Hero() {
         <div className="flex flex-col gap-12 items-center">
           <div className="space-y-8 relative z-10 text-center max-w-4xl">
             <div className="space-y-2">
-              <h1 className="md:text-7xl font-extrabold tracking-tight text-[79px]">Frustasi Omzet Jualan 
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">Frustasi Omzet Jualan 
               Gak Naik-naik?</h1>
               <div className="space-y-0">
-                <h2 className="text-2xl md:text-3xl font-semibold leading-[1.2] tracking-tight">
+                <h2 className="text-base md:text-xl lg:text-3xl font-semibold leading-[1.2] tracking-tight">
                   Pelajari Rahasia Tembus <span className="relative inline-block">
                     Untung Jutaan
                     <svg className="absolute w-full h-3 -bottom-1 left-0 text-yellow-400" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -38,7 +38,7 @@ export function Hero() {
                     </svg>
                   </span> Lewat Konten & Affiliate
                 </h2>
-                <h3 className="text-2xl md:text-3xl font-semibold leading-[1.2]">
+                <h3 className="text-sm md:text-lg lg:text-2xl font-semibold leading-[1.2]">
                   Lewat Seminar Bareng 3 Expert Marketing & Tiktok Official Partner
                 </h3>
               </div>
