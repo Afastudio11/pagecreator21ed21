@@ -27,15 +27,15 @@ const photos = [
   },
   {
     id: 5,
-    src: null,
-    alt: "Coming Soon - Photo 5",
-    title: "Coming Soon"
+    src: "/event_photo_5.jpg",
+    alt: "Event Photo 5 - Masterclass Session",
+    title: "Masterclass"
   },
   {
     id: 6,
-    src: null,
-    alt: "Coming Soon - Photo 6",
-    title: "Coming Soon"
+    src: "/event_photo_6.jpg",
+    alt: "Event Photo 6 - Speaker Presentation",
+    title: "Expert Speaker"
   }
 ];
 
