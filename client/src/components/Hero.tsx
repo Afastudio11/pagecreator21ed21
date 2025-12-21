@@ -35,7 +35,7 @@ export function Hero() {
                   <svg className="absolute w-full h-3 -bottom-1 left-0 text-yellow-400" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
                   </svg>
-                </span> Lewat Konten & Affiliate
+                </span> Konten & Affiliate Lewat
                 <br />
                 Lewat Seminar Bareng 3 Expert Marketing & Tiktok Official Partner
               </h2>
