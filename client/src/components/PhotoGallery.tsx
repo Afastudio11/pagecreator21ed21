@@ -1,10 +1,10 @@
 import { ImageOff } from "lucide-react";
-import photo1 from "@assets/IMG_7781_1766158513942.PNG";
-import photo2 from "@assets/IMG_6429_1766158513942.jpg";
-import photo3 from "@assets/IMG_6437_1766158513943.jpg";
-import photo4 from "@assets/IMG_7780_1766158513943.PNG";
-import photo5 from "@assets/event_photo_5_1766333187446.jpg";
-import photo6 from "@assets/event_photo_6_1766333187446.jpg";
+import photo1 from "@assets/Foto_1_1766400378149.PNG";
+import photo2 from "@assets/foto2_1766400378149.JPG";
+import photo3 from "@assets/foto3_1766400378149.jpg";
+import photo4 from "@assets/Foto_4_1766400378149.PNG";
+import photo5 from "@assets/foto_5_1766400378149.jpg";
+import photo6 from "@assets/foto_6_1766400378149.jpg";
 
 const photos = [
   {
