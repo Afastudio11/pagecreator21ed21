@@ -1,0 +1,6 @@
+// Check which images are critical (above the fold) vs lazy load
+// Images used on Home page:
+// 1. Above the fold: Logo, Navbar images, Hero section
+// 2. Below: PhotoGallery, Testimonials
+
+// Strategy: Mark heavy images with loading="lazy"

@@ -57,6 +57,7 @@ export function CaseStudy() {
                     <img 
                       src={image.src} 
                       alt={image.alt}
+                      loading="lazy"
                       className="w-full h-auto object-cover"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
@@ -88,6 +89,7 @@ export function CaseStudy() {
                     <img 
                       src={image.src} 
                       alt={image.alt}
+                      loading="lazy"
                       className="w-full h-auto object-cover"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
